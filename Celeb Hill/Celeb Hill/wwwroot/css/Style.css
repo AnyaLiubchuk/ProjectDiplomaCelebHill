@@ -1,0 +1,49 @@
+﻿body {
+    font-family: sans-serif, Open sans-serif;
+}
+
+h1, h2 {
+    color: #909090
+}
+
+.menubar {
+    background: #B0B0B0;
+    height: 45px;
+    vertical-align: middle;
+    margin-top: 70px
+}
+
+.menu_element {
+    color: #993399;
+    display: inline-block;
+    margin-top: 5px;
+    margin-left: 50px;
+    font-size: 24px
+}
+
+.main_message {
+    margin-left: 274px;
+    width: 600px;
+    margin-top: -44px
+}
+
+.second_message {
+    margin-left: 274px;
+    width: 506px;
+    margin-top: -5px
+}
+
+a
+{
+    color: inherit;
+    text-decoration: inherit;
+}
+
+a:hover {
+    color: white;
+}
+
+.workblock {
+    margin-left: 270px;
+    margin-top: -48px;
+}

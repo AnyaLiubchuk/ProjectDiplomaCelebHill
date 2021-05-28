@@ -1,0 +1,6 @@
+﻿<StaticWebAssets Version="1.0">
+  <ContentRoot BasePath="/" Path="E:\COURSES\Diploma\Celeb Hill\Celeb Hill\bin\Debug\net5.0\wwwroot\" />
+  <ContentRoot BasePath="/" Path="E:\COURSES\Diploma\Celeb Hill\Celeb Hill\obj\Debug\net5.0\scopedcss\bundle\" />
+  <ContentRoot BasePath="/" Path="E:\COURSES\Diploma\Celeb Hill\Celeb Hill\wwwroot\" />
+  <ContentRoot BasePath="/" Path="E:\COURSES\Diploma\Celeb Hill\CelebHillServer\obj\Debug\net5.0\scopedcss\bundle\" />
+</StaticWebAssets>

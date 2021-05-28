@@ -1,0 +1,75 @@
+﻿@page "/ticketsconcerts"
+
+@using Newtonsoft.Json
+@inject HttpClient http
+
+<div class="workblock">
+    <div class="row">
+        <div class="col-2"></div>
+        <div class="col-8">
+            <h2>Расписание концертов</h2>
+        </div>
+    </div>
+    <div clacc="col-2"></div>
+    <div class="col-6">
+        <table class="table">
+            <thead>
+                <tr>
+                    <th scope="col">ID</th>
+                    <th scope="col">Наименование концерта</th>
+                    <th scope="col">Номер телефона</th>
+                    <th scope="col">Rrice USD</th>
+                    <th scope="col">Course USD</th>
+                    <th scope="col">Price BYN</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var x in concs)
+                {
+                    <tr>
+                        <th scope="row">@x.id</th>
+                        <td>@x.concert</td>
+                        <td>@x.phoneNumber</td>
+                        <td>@x.priceUSD</td>
+                        <td>@x.courseOfUSD</td>
+                        <td>@x.priceBYN</td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+
+
+    </div>
+</div>
+
+
+
+
+
+
+
+@code {
+    public List<Concert> concs;
+    protected override async Task OnInitializedAsync()
+    {
+        base.OnInitialized();
+        concs = new List<Concert>();
+
+        /* Concert concs1 = new Concert(1, "Friday", "+375298765432", 10f, 2.5f, 25f);
+
+        concs.Add(concs1);*/
+
+        concs = new List<Concert>();
+        String jsonString = await http.GetStringAsync("http://localhost:10000/api/TickeT/GetList");
+
+    Console.WriteLine(jsonString);
+        concs = JsonConvert.DeserializeObject<List<Concert>>(jsonString);
+
+
+
+    }
+
+
+
+
+}
